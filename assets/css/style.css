@@ -73,6 +73,9 @@ body {
     padding: 16px 60px;
     height: 80px;
     box-sizing: border-box;
+
+    grid-column: 2;
+
   }
 
   .cabecalho__menu {
@@ -186,6 +189,8 @@ body {
   .menu-lateral {
     position: static;
     width: 200px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 }
 
@@ -206,6 +211,7 @@ body {
     grid-template-columns: auto 1fr auto;
     column-gap: 32px;
     padding: 16px 60px;
+    grid-column: 2;
   }
 }
 
@@ -314,9 +320,38 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--links); 
+    justify-self: flex-end;
   }
-}
 
+  .cartao__lista {
+    display: grid;
+    row-gap: 16px;
+    grid-column: span 2;w
+  }
+
+  .cartao__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+  }
+
+  .cartao__item-thumbnail {
+    width: 32px;
+    grid-row: span 2;
+  }
+
+  .cartao__item-titulo {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+  }
+
+  .cartao__item-perfil {
+    font-size: 0.8rem;
+    color: var(--fonte-alternativa);
+  }
+
+}
 
 
 .secao {
